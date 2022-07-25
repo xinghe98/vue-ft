@@ -1,4 +1,5 @@
 import UserLogin from '../views/UserLogin.vue'
+import userinfo from '../views/userinfo.vue'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
@@ -12,15 +13,22 @@ const routes = [
   },
   {
     path: '/users',
-    name: 'findall',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import('../views/Findall.vue'),
-    meta: { 
-      requiresAuth: true 
-  }
-  }
+    meta: { requiresAuth: true },
+    children:[{
+      path: '/',
+      component: userinfo
+    },
+    {
+      path: '/upload',
+      component:() => import('../views/upload.vue')
+    }
+  ]
+  },
+
 ]
 
 const router = new VueRouter({

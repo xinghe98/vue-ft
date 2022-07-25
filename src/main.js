@@ -5,7 +5,7 @@ import './plugins/element.js'
 import axios from 'axios'
 
 const instance = axios.create({
-  baseURL:'http://124.71.70.42:3001/api/'
+  baseURL:'http://192.168.5.154:3000/api/'
 })
 
 instance.interceptors.request.use(
