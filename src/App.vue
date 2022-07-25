@@ -10,12 +10,3 @@ export default {
   name: 'app',
 }
 </script>
-
-<style>
-#app {
-  text-align: center;
-  padding: 20;
-  margin: 0;
-}
-
-</style>

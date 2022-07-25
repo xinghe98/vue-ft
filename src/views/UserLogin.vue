@@ -70,7 +70,14 @@
       resetForm(formName) {
         this.$refs[formName].resetFields();
       }
-    }
+    },
+    mounted() {
+    document.querySelector('body').setAttribute('style', "background-image: url("+require("../img/back.jpg")+");background-size: cover;" +
+      "background-repeat: no-repeat")
+  },
+  beforeDestroy() {
+   document.querySelector('body').removeAttribute('style')
+  },
   }
 </script>
 
@@ -81,11 +88,7 @@ position:absolute;
 top:30%;
 left: 38%;
 }
-body{
-  background-image:url('../img/back.jpg');
-  /* background-repeat:no-repeat; */
-  background-size:110%;
-}
+
 .el-card {
   width: 373px;
   height: 210px;
