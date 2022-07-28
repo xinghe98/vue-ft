@@ -11,7 +11,6 @@ const instance = axios.create({
 instance.interceptors.request.use(
 	config => {
 	    if (localStorage.getItem("adminToken")) {
-        console.log(localStorage.getItem("adminToken"))  // 判断是否存在token，如果存在的话，则每个http header都加上token
 	        config.headers.Authorization = 'Bearer '+ localStorage.getItem("adminToken")
 	    }
 	    return config
@@ -19,6 +18,7 @@ instance.interceptors.request.use(
 	err => {
 	    return Promise.reject(err)
 })
+
 
 Vue.prototype.$http = instance
 Vue.config.productionTip = false

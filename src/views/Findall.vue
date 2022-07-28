@@ -7,6 +7,7 @@
         <el-menu-item-group>
           <el-menu-item index="/users" class="el-icon-coin">用户列表</el-menu-item>
           <el-menu-item index="/upload" class="el-icon-circle-plus-outline">上传图片</el-menu-item>
+          <el-menu-item index="/images" class="el-icon-picture-outline">图片管理</el-menu-item>
         </el-menu-item-group>
         </el-submenu>
     </el-menu>
@@ -37,4 +38,3 @@ html,body{
     color: #333;
   }
 </style>
-
